@@ -15,7 +15,7 @@ class Orbit_Parameters:
     INITIAL_ATTITUDE = np.array([1,0,0])
     INITIAL_ANGLE = np.deg2rad(10.0)
     SHAPE_VECTOR = np.array([0.05, 0.01, 0.02])
-    INTERTIAL_MATRIX = np.array([
+    INERTIAL_MATRIX = np.array([
                                     [10.0, 0.0, 0.0],
                                     [0.0, 20.0, 0.0],
                                     [0.0, 0.0, 30.0]

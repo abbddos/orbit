@@ -4,6 +4,7 @@ from poliastro.twobody import Orbit
 from poliastro.twobody.propagation import propagate as Propagator
 from pyquaternion import Quaternion
 from astropy import units as u
+from scipy.integrate import solve_ivp
 
 class Orbit_Environment:
     def __init__(self, a, ecc, inc, raan, argp, nu, Cd, A, rho, noise_mean, noise_std):
@@ -193,6 +194,22 @@ class Orbit_Environment:
             desired_body_angular_velocities.append(omega_target_body)
 
         return np.array(desired_body_angular_velocities)
+    
+    
+    
+    def get_position_at_time(self, time_s):
+        """Returns spacecraft position (r_eci) and velocity (v_eci) in ECI at given time."""
+        orbit = self.propagator_func(time_s)
+        return orbit.r.to_value(u.m), orbit.v.to_value(u.m / u.s)
+    
+    def get_full_orbit_positions(self, num_points=300):
+        """Returns all r_eci points for one full orbital period for static plotting."""
+        times = np.linspace(0, self.initial_orbit.period.to_value(u.s), num_points) * u.s
+        full_orbit_positions = []
+        for t in times:
+            r_vec = self.initial_orbit.propagate(t).r.to_value(u.m)
+            full_orbit_positions.append(r_vec)
+        return np.array(full_orbit_positions)
 
 
 
