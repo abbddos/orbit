@@ -10,7 +10,6 @@ from pyquaternion import Quaternion
 from orbit import Orbit_Environment, SpaceCraft 
 from parameters import Orbit_Parameters 
 from astropy import units as u
-from animation import SpacecraftAnimator
 
 
 # --- Functions for Static Plots ---
