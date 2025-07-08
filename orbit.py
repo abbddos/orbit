@@ -196,7 +196,6 @@ class Orbit_Environment:
         return np.array(desired_body_angular_velocities)
     
     
-    
     def get_position_at_time(self, time_s):
         """Returns spacecraft position (r_eci) and velocity (v_eci) in ECI at given time."""
         orbit = self.propagator_func(time_s)

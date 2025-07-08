@@ -1,12 +1,12 @@
 import numpy as np 
 
 class Orbit_Parameters:
-    SEMI_MAJOR_AXIS = 6871.0
+    SEMI_MAJOR_AXIS = 6871.0 # This is the key
     ECCENTRICITY  = 0.001
     INCLINATION = 45.0
     RAAN = 0.0
     ARGP = 0.0
-    TRUE_ANOMALY = 0.0  #nu 
+    TRUE_ANOMALY = 0.0
     DRAG = 2.2
     REFERENCE_AREA = 1.0
     ATMOSPHERIC_DENSITY = 1e-12
@@ -17,11 +17,11 @@ class Orbit_Parameters:
     SHAPE_VECTOR = np.array([0.05, 0.01, 0.02])
     INERTIAL_MATRIX = np.array([
                                     [10.0, 0.0, 0.0],
-                                    [0.0, 20.0, 0.0],
-                                    [0.0, 0.0, 30.0]
-                                ]) 
-    INITIAL_LINEAR_VELOCITY = np.array([0.0, 7615.0, 0.0]) #V
-    INITIAL_ANGULAR_VELOCITY = np.array([0.001, 0.0, 0.0]) #W
+                                    [0.0, 8.0, 0.0],
+                                    [0.0, 0.0, 5.0]
+                                ])
+    INITIAL_LINEAR_VELOCITY = np.array([0.0, 7615.0, 0.0])
+    INITIAL_ANGULAR_VELOCITY = np.array([0.001, 0.0, 0.0])
 
 
     
