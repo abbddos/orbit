@@ -107,7 +107,7 @@ spacecraft = SpaceCraft(
 
 # --- Simulation Setup ---
 # For animation, let's keep the duration shorter initially, e.g., 0.25 of an orbit
-simulation_duration_s = orbit_env.time_of_flight.to_value(u.s) * 0.25 
+simulation_duration_s = orbit_env.time_of_flight.to_value(u.s)
 dt_simulation_step = 10.0 # Time step for ODE solver propagation
 animation_dt_interval = 2.0 # Time step for animation frames (smaller for smoother animation)
 
