@@ -14,14 +14,14 @@ class Orbit_Parameters:
     NOISE_STD = 1e-9
     INITIAL_ATTITUDE = np.array([1,0,0])
     INITIAL_ANGLE = np.deg2rad(10.0)
-    SHAPE_VECTOR = np.array([0.05, 0.01, 0.02])
+    SHAPE_VECTOR = np.array([0.5, 0.1, 0.2])
     INERTIAL_MATRIX = np.array([
-                                    [10.0, 0.0, 0.0],
-                                    [0.0, 8.0, 0.0],
-                                    [0.0, 0.0, 5.0]
+                                    [100.0, 0.0, 0.0],
+                                    [0.0, 100.0, 0.0],
+                                    [0.0, 0.0, 100.0]
                                 ])
     INITIAL_LINEAR_VELOCITY = np.array([0.0, 7615.0, 0.0])
-    INITIAL_ANGULAR_VELOCITY = np.array([0.001, 0.0, 0.0])
+    INITIAL_ANGULAR_VELOCITY = np.array([10, 0.0, 0.0])
 
 
     
